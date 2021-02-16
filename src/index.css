@@ -1,3 +1,15 @@
 body {
     background-color: aquamarine;
+<<<<<<< HEAD
+=======
+}
+
+.custom-figure {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.custom-figure:hover {
+    opacity: .7;
+>>>>>>> ffee40b1a23aedabd31e5c2d165fd41d9988fee6
 }

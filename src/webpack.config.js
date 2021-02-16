@@ -6,6 +6,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index_bundle.js',
+<<<<<<< HEAD
+=======
+    publicPath: '/'
+>>>>>>> ffee40b1a23aedabd31e5c2d165fd41d9988fee6
   },
   resolve: {
     modules: [
@@ -35,10 +39,20 @@ module.exports = {
       },
     ],
   },
+<<<<<<< HEAD
   mode: 'development',
+=======
+  devServer: {
+    historyApiFallback: true,
+  },
+>>>>>>> ffee40b1a23aedabd31e5c2d165fd41d9988fee6
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
     }),
   ],
+<<<<<<< HEAD
+=======
+  mode: 'development'
+>>>>>>> ffee40b1a23aedabd31e5c2d165fd41d9988fee6
 };
