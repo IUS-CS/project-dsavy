@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'react-bootstrap/Image';
+import Figure from 'react-bootstrap/Figure'
 
 const ClickableImage = (props) => {
     return(
-        <div>
-            <Image src={props.image} fluid />
-            <h3 style={{alignItems:'center'}}>{props.name}</h3>
-        </div>
+        <Figure>
+            <Figure.Image src={props.image} fluid />
+            <Figure.Caption style={{textAlign:'center'}}>{props.name}</Figure.Caption>
+        </Figure>
     )
 }
 
