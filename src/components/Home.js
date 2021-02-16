@@ -1,9 +1,13 @@
 import React from 'react';
+import ClickableImage from './Home-image';
 
 function Home() {
     return (
-      <div>This is the Home Component</div>
-    )
+      <div>
+        <h1>Home</h1>
+        <ClickableImage name='test' image='../images/LinkedList.png'/>
+      </div>
+    );
   }
 
 export default Home;
