@@ -1,9 +1,18 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navigation from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About"
+import List from "./components/List"
 
 export default function App() {
     return (
-      <div>
-        <h1>Welcome to DSAVY!</h1>
-      </div>
+      <Router>
+        <Navigation/>
+        <Route path='/' component={Home} exact/>
+        <Route path='/about' component={About} />
+        <Route path='/list' component={List} />
+      </Router>
     );
   }

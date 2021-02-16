@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index_bundle.js',
+    publicPath: '/'
   },
   resolve: {
     modules: [
@@ -35,10 +36,13 @@ module.exports = {
       },
     ],
   },
-  mode: 'development',
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
     }),
   ],
+  mode: 'development'
 };
