@@ -14,7 +14,7 @@ This webapp is built with React and requires Node and npm to build locally.
 DSAVY will be tested using Jest JavaScript testing framework for the unit tests.  
 All unit tests are located in src/unit_tests  
 To setup Jest and run:
-* Run `npm install --save-dev jest`
+* Run `npm install --save-dev jest` in /src
 * Run `npm run test`
  
 ## Purpose
