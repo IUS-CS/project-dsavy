@@ -53,5 +53,5 @@ Members present:
   8      | User wants to see a fully functional stack data structure. 
   8      | User wants to see a fully functional queue data structure. 
   2      | As developers, we want to put more information in about page. 
-  8      | As developers, we want to implement more testing for the homepage 
-         | and at least one data structure.   
+  8      | As developers, we want to implement more testing for the homepage and at least one data structure.  
+           
