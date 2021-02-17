@@ -1,47 +1,57 @@
-# Sprint Ceremony Minutes
+# Sprint 1 Ceremony Minutes
   
-Date: 2020-09-21
+Date: 2021-02-17
 
 Members present:
 
-* Chris Sexton
-* Bones Sexton
-* Parsnip Sexton
-* Schnitzel Sexton
+* Justin Hurst
+* Zaid Hussain 
+* Jason Henry
   
   ## Demo
   
   This sprint, we completed:
-  
-  * X
-  * Y
-  * Z
+
+    * Setting up the repository
+    * Adding initial documentation
+    * Adding executable initial react code
+    * Setting up testing environment
+    * Installing depedencies for the project
+    * Adding the home layout of the webpage
+    * Adding an initial look for linked list component
   
   Here are screenshots of what we did:
   
-  ![Thing](/docs/images/screenshot1.png?raw=true)
+  ![Thing](/doc/images/homepage.png?raw=true)
+  ![Thing](/doc/images/linkedlist.png?raw=true)
   
   ## Retro
   
-  [What is a Sprint Retrospective](https://www.scrum.org/resources/what-is-a-sprint-retrospective)
-  
   ### Good
   
-  * Sexton is amazing
-  * I love working on X
+  * Group communicated tasks efficiently 
+  * Prototype type code is off to a good start 
+  * Zaid and Justin created and started to improve prototype  
+  * Jason started process on unit testing the UI
   
   ### Bad
   
-  * This thing went poorly because X
-  * So and so is mean
+  * Focus on not having previous commits in new branches
+  * Jason needs to become more familiar with React 
   
   ### Actionable Commitments
   
-  * As a team, we will...
+  * Group needs to decide on library to use in animation of the data structures 
+  * Group should continue to think of which data structures and algorithms to include 
   
   ## Planning
   
   Points | Story
   -------|--------
-  5      | As a user, I want...
-  8      | As an administrator, I want... so I can ...
+  5      | User wants to be able to see animation of linked list. 
+  3      | User wants to be able to input custom data to linked list. 
+  8      | User wants to see a fully functional stack data structure. 
+  8      | User wants to see a fully functional queue data structure. 
+  2      | As developers, we want to put more information in about page. 
+  8      | As developers, we want to implement more testing for the homepage 
+         | and at least one data structure.   
