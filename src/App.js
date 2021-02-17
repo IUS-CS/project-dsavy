@@ -7,12 +7,12 @@ import About from "./components/About"
 import LinkedList from "./components/LinkedList";
 
 export default function App() {
-    return (
-      <Router>
-        <Navigation/>
+  return (
+    <Router>
+      <Navigation/>
         <Route path='/' component={Home} exact/>
         <Route path='/about' component={About} />
         <Route path='/linkedlist' component={LinkedList} />
-      </Router>
-    );
-  }
+    </Router>
+  );
+}
