@@ -16,6 +16,6 @@ All unit tests are located in src/unit_tests
 To setup Jest and run:
 * Run `npm install --save-dev jest`
 * Run `npm run test`
-
+ 
 ## Purpose
 We hope that DSAVY will provide a way for students to learn data structures more quickly through visualization. 
