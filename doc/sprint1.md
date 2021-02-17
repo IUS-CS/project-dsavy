@@ -48,10 +48,10 @@ Members present:
   
   Points | Story
   -------|--------
-  5      | User wants to be able to see animation of linked list. 
-  3      | User wants to be able to input custom data to linked list. 
-  8      | User wants to see a fully functional stack data structure. 
-  8      | User wants to see a fully functional queue data structure. 
+  5      | As a user, I want to be able to see animation of linked list. 
+  3      | As a user, I want to be able to input custom data to linked list. 
+  8      | As a user, I want to see a fully functional stack data structure. 
+  8      | As a user, I want to see a fully functional queue data structure. 
   2      | As developers, we want to put more information in about page. 
   8      | As developers, we want to implement more testing for the homepage and at least one data structure.  
            
