@@ -30,7 +30,7 @@ Members present:
   ### Good
   
   * Group communicated tasks efficiently 
-  * Prototype type code is off to a good start 
+  * Prototype code is off to a good start 
   * Zaid and Justin created and started to improve prototype  
   * Jason started process on unit testing the UI
   
