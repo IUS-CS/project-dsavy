@@ -22,8 +22,8 @@ Members present:
   
   Here are screenshots of what we did:
   
-  ![Thing](/doc/images/homepage.png?raw=true)
-  ![Thing](/doc/images/linkedlist.png?raw=true)
+  ![Homepage](/doc/images/homepage.png?raw=true)
+  ![Linked List](/doc/images/linkedlist.png?raw=true)
   
   ## Retro
   
