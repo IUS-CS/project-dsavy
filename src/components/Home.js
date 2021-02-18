@@ -5,7 +5,7 @@ import Card from './Card.js'
 
 function Home() {
   return (
-      <Container style={{paddingTop:20}} className="container-fluid d-flex justify-content-center">
+      <Container className="container-fluid d-flex justify-content-center">
         <Row>
             <Col>
                 <Card name="Linked Lists" image="../images/LinkedList.png" page='/linkedlist'
