@@ -41,8 +41,8 @@ Members present:
   
   ### Actionable Commitments
   
-  * Group needs to decide on library to use in animation of the data structures 
-  * Group should continue to think of which data structures and algorithms to include 
+  * As a team, we need to decide on the library to use for the animation of the data structures
+  * As a team, we will continue to think of which data structures and algorithms to incorporate
   
   ## Planning
   
