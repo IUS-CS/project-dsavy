@@ -2,11 +2,23 @@ body {
     background-color: aquamarine;
 }
 
-.custom-figure {
-    opacity: 1;
-    transition: 0.3s;
+.custom-card {
+    opacity: .8;
+    transition: 0.2s;
 }
 
-.custom-figure:hover {
-    opacity: .7;
+.custom-card:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.node {
+    border-radius: 10px;
+    padding-top: .27em;
+    width: 3em;
+    height: 2em;
+    background: linear-gradient(#58C2ED, #1B85DC);
+    text-align: center;
+    color:rgb(243, 240, 240);
+    font-weight:600;
 }

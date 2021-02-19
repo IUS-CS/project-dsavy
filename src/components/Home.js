@@ -4,16 +4,16 @@ import ClickableImage from './Home-image';
 
 function Home() {
   return (
-      <Container style={{paddingTop:20}}>
-        <Row style={{padding:10}}>
-          <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/linkedlist'/></Col>
-          <Col><ClickableImage name='Stack' image='../images/LinkedList.png' page='/about'/></Col>
-          <Col><ClickableImage name='Data Structure' image='../images/LinkedList.png' page='/about'/></Col>
+      <Container fluid='sm'>
+        <Row style={{paddingTop:40}}>
+          <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/linkedlist' description='Text...'/></Col>
+          <Col><ClickableImage name='Stack' image='../images/Stack.png' page='/about' description='Text...'/></Col>
+          <Col><ClickableImage name='Data Structure' image='../images/LinkedList.png' page='/about' description='Text...'/></Col>
         </Row>
-        <Row>
-        <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about'/></Col>
-          <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about'/></Col>
-          <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about'/></Col>
+        <Row style={{paddingTop:40}}>
+          <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about' description='Text...'/></Col>
+          <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about' description='Text...'/></Col>
+          <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about' description='Text...'/></Col>
         </Row>
       </Container>
   );
