@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useSpring, animated, Trail } from 'react-spring';
 import Node from './List-Node';
+import ListForm from './List-Form';
 
 const LinkedList = () => {
     const [key, setKey] = useState(1);
@@ -17,8 +18,11 @@ const LinkedList = () => {
     })
   
     return (
-      <div key={key} style={{paddingTop:120}}>
-        <animated.div style={scrolling}><Node/></animated.div>
+      <div>
+        <div key={key} style={{paddingTop:120}}>
+          <animated.div style={scrolling}><Node/></animated.div>
+        </div>
+        <ListForm/>
       </div>
     )
   }
