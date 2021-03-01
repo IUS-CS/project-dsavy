@@ -1,13 +1,28 @@
-import React from 'react'
-import { Form, Row, Col, Button, Container } from 'react-bootstrap'
+import React, { useState } from 'react';
+import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 
 const ListForm = () => {
-    const onFormSubmit = e => {
+    const [list, setList] = useState([]);
+
+    const onInsert = e => {
         e.preventDefault()
         const formData = new FormData(e.target),
-              formDataObj = Object.fromEntries(formData.entries())
-        console.log(formDataObj)
+              formDataObj = Object.fromEntries(formData.entries());
+        setList(list => list.concat(formDataObj.Value));
+        console.log(list);
       }
+
+    const onRemove = e => {
+        e.preventDefault()
+        const formData = new FormData(e.target),
+              formDataObj = Object.fromEntries(formData.entries());
+        console.log(formDataObj);
+        let listCopy = [...list];
+        listCopy.splice(formDataObj.Place, 1);
+        console.log(`filtered list is ${listCopy}`)
+        setList(listCopy);
+        console.log(list);
+    }
 
 
     return (
@@ -16,7 +31,7 @@ const ListForm = () => {
                 Insert
             </Row>
             <Row style={{justifyContent:'center'}}>
-            <Form inline onSubmit={onFormSubmit}>
+            <Form inline onSubmit={onInsert}>
                 <Form.Control className="my-1 mr-2" type="text" name="Value" placeholder="Value" />
                 <Form.Label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">
                     At Position
@@ -39,7 +54,7 @@ const ListForm = () => {
                 Remove
             </Row>
             <Row style={{justifyContent:'center'}}>
-                <Form inline>
+                <Form inline onSubmit={onRemove}>
                     <Form.Label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">
                         Element at Position
                     </Form.Label>
@@ -47,7 +62,7 @@ const ListForm = () => {
                         as="select"
                         className="my-1 mr-sm-2"
                         id="inlineFormCustomSelectPref"
-                        custom
+                        name="Place"
                     >
                         <option value="0">Head</option>
                         <option value="1">One</option>
@@ -57,6 +72,7 @@ const ListForm = () => {
                     <Button type="submit" className="my-1" style={{}}>Remove</Button>
                 </Form>
             </Row>
+            <h1>{list}</h1>
         </Container>
     )
 }
