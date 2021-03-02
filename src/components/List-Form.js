@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 
-const ListForm = () => {
-    const [list, setList] = useState([]);
+const ListForm = ({list, onListChange}) => {
+    const handleChange = e => {
+        onListChange(e);
+    }
 
     const onInsert = e => {
         e.preventDefault()
         const formData = new FormData(e.target),
               formDataObj = Object.fromEntries(formData.entries());
-        setList(list => list.concat(formDataObj.Value));
+        handleChange(list => list.concat(formDataObj.Value));
         console.log(list);
       }
 
@@ -20,7 +22,7 @@ const ListForm = () => {
         let listCopy = [...list];
         listCopy.splice(formDataObj.Place, 1);
         console.log(`filtered list is ${listCopy}`)
-        setList(listCopy);
+        handleChange(listCopy);
         console.log(list);
     }
 
@@ -72,7 +74,6 @@ const ListForm = () => {
                     <Button type="submit" className="my-1" style={{}}>Remove</Button>
                 </Form>
             </Row>
-            <h1>{list}</h1>
         </Container>
     )
 }
