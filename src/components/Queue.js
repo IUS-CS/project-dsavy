@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Enqueue from './Enqueue'
+import Dequeue from './Dequeue'
 
 const Queue = () => {
   const [queue, setQueue] = useState([])
@@ -9,7 +10,8 @@ const Queue = () => {
   }
 
   const onDelete = () => {
-    setQueue(queue.shift())
+    let temp = queue.splice(0, 1)
+    setQueue(temp)
   }
 
   return (
