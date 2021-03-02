@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button} from 'react-bootstrap';
 
 const Dequeue = ({dequeue}) => {
   
@@ -8,7 +9,7 @@ const Dequeue = ({dequeue}) => {
   }
 
   return (
-    <button className='queueButton' onClick={onClick}>Dequeue</button>
+    <Button className="my-1" onClick={onClick}>Dequeue</Button>
   )
 
 }

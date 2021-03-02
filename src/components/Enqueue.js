@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Button} from 'react-bootstrap';
 
 const Enqueue = ({enqueue}) => {
   const [entry, setEntry] = useState('')
@@ -11,7 +12,7 @@ const Enqueue = ({enqueue}) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <button className='queueButton' type="submit">Enqueue</button>
+      <Button type="submit" className="my-1">Enqueue</Button>
       <input className='enqueue' type='text' value={entry} onChange={(e) => setEntry(e.target.value)} />
     </form>
   )
