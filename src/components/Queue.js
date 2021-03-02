@@ -16,7 +16,10 @@ const Queue = () => {
 
   return (
     <div>
-      <h1>hello</h1>
+      <header className='header'>
+        <h1>Queue</h1>
+        <h1>FIFO: First In First Out</h1>
+      </header>
       <Enqueue enqueue={onAdd} />
       <Dequeue dequeue={onDelete} />
       <div className='queue'>{queue.map((entry) => (<li>{entry}</li>))}</div> 
