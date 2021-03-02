@@ -5,6 +5,7 @@ import Navigation from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About"
 import LinkedList from "./components/LinkedList";
+import Queue from './components/Queue';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path='/' component={Home} exact/>
         <Route path='/about' component={About} />
         <Route path='/linkedlist' component={LinkedList} />
+        <Route path='/queue' component={Queue} />
     </Router>
   );
 }
