@@ -2,7 +2,7 @@
 
   * [Introduction](#introduction)
   * [Architectural Representation](#architectural-representation)
-  * [Architectural Representation](#architecture-diagram)
+  * [Architectural Diagram](#architecture-diagram)
 
 ## Introduction
 Intro
