@@ -15,6 +15,7 @@ body {
     display: inline;
     text-align: center;
     margin: 3px 3px 3px 3px;
+    font-size: 20px;
 }
 
 .queueButton {
@@ -26,4 +27,8 @@ body {
 
 .enqueue {
     border-radius: 8px;
+}
+
+.header {
+    text-align: center
 }
