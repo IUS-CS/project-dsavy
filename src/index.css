@@ -14,6 +14,7 @@ body {
 }
 
 .node {
+    position: absolute;
     border-radius: 10px;
     padding-top: .27em;
     width: 3em;
@@ -22,4 +23,28 @@ body {
     text-align: center;
     color:rgb(243, 240, 240);
     font-weight:600;
+}
+.node::after {
+    z-index: -1;
+    content: "";
+    background-color: gray;
+    position: absolute;
+    left: 40px;
+    bottom: 16px;
+
+    width: 50px;
+    height: 3px;
+}
+.node::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 84px;
+    bottom: 11.5px;
+
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+	border-left: 10px solid gray;
+	border-bottom: 6px solid transparent;
 }
