@@ -4,6 +4,8 @@ import Node from './List-Node';
 import ListForm from './List-Form';
 
 const LinkedList = () => {
+    const [list, setList] = useState([]);
+
     const [key, setKey] = useState(1);
   
     const scrolling = useSpring({
@@ -22,7 +24,8 @@ const LinkedList = () => {
         <div key={key} style={{paddingTop:120}}>
           <animated.div style={scrolling}><Node/></animated.div>
         </div>
-        <ListForm/>
+        <ListForm list={list} onListChange={setList}/>
+        <h2>{list}</h2>
       </div>
     )
   }
