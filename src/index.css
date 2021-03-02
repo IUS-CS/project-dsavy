@@ -10,3 +10,20 @@ body {
 .custom-figure:hover {
     opacity: .7;
 }
+
+.queue li {
+    display: inline;
+    text-align: center;
+    margin: 3px 3px 3px 3px;
+}
+
+.queueButton {
+    text-align: center;
+    background-color: aquamarine;
+    margin: 3px 3px 3px 3px;
+    border-radius: 8px;
+}
+
+.enqueue {
+    border-radius: 8px;
+}

@@ -8,9 +8,7 @@ const Dequeue = ({dequeue}) => {
   }
 
   return (
-        <button onClick={onClick}>Dequeue</button>
-
-
+    <button className='queueButton' onClick={onClick}>Dequeue</button>
   )
 
 }

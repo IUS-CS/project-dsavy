@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 import Enqueue from './Enqueue'
 import Dequeue from './Dequeue'
 
@@ -10,8 +11,7 @@ const Queue = () => {
   }
 
   const onDelete = () => {
-    let temp = queue.splice(0, 1)
-    setQueue(temp)
+    setQueue(queue.slice(1))
   }
 
   return (
@@ -19,7 +19,7 @@ const Queue = () => {
       <h1>hello</h1>
       <Enqueue enqueue={onAdd} />
       <Dequeue dequeue={onDelete} />
-      <div>{queue.map((entry) => ( <h3>{entry}</h3>))}</div> 
+      <div className='queue'>{queue.map((entry) => (<li>{entry}</li>))}</div> 
     </div>
   )
 }

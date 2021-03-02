@@ -10,13 +10,11 @@ const Enqueue = ({enqueue}) => {
   }
 
   return (
-      <form onSubmit={onSubmit}>
-        <button type="submit">Enqueue</button>
-        <input type='text' value={entry} onChange={(e) => setEntry(e.target.value)} />
-        
-      </form>
+    <form onSubmit={onSubmit}>
+      <button className='queueButton' type="submit">Enqueue</button>
+      <input className='enqueue' type='text' value={entry} onChange={(e) => setEntry(e.target.value)} />
+    </form>
   )
-
 }
 
 export default Enqueue
