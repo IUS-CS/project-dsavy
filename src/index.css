@@ -2,9 +2,35 @@ body {
     background-color: aquamarine;
 }
 
-.custom-figure {
+.custom-card {
+    opacity: .8;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.custom-card:hover {
     opacity: 1;
-    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.node {
+    position: absolute;
+    border-radius: 10px;
+    padding-top: .27em;
+    width: 3em;
+    height: 2em;
+    background: linear-gradient(#58C2ED, #1B85DC);
+    text-align: center;
+    color:rgb(243, 240, 240);
+    font-weight:600;
+}
+.node::after {
+    z-index: -1;
+    content: "";
+    background-color: gray;
+    position: absolute;
+    left: 40px;
+    bottom: 16px;
 }
 
 .custom-figure:hover {
