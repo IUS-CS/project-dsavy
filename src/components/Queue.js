@@ -1,34 +1,24 @@
 import React, {useState} from 'react'
-import DisplayQueue from './DisplayQueue'
+import Enqueue from './Enqueue'
 
 const Queue = () => {
   const [queue, setQueue] = useState([])
-  const [entry, setEntry] = useState(0)
 
-  const handleQueue = (e) => {
-    e.preventDefault();
+  const onAdd = ({entry}) => {
     setQueue(queue.concat(entry))
   }
-  
-  const handleNewEntry= (e) => {
-    setEntry(e.target.value)
+
+  const onDelete = () => {
+    setQueue(queue.shift())
   }
-  
+
   return (
     <div>
-      <header className = "header">
-        <h1>Queue</h1>
-        <h3>Last In First Out LIFO</h3>
-      </header>
-      <form className="Enqueue" onSubmit={handleQueue}>
-        <input onChange={handleNewEntry} value={entry} />
-        <button type="submit">Enqueue</button>
-      </form>
-      <ul>
-      <DisplayQueue entries={queue} />
-      </ul>
+      <h1>hello</h1>
+      <Enqueue enqueue={onAdd} />
+      <Dequeue dequeue={onDelete} />
+      <div>{queue.map((entry) => ( <h3>{entry}</h3>))}</div> 
     </div>
-  
   )
 }
 
