@@ -1,32 +1,34 @@
 import React, {useState} from 'react';
-import { useSpring, animated, Trail } from 'react-spring';
+import { useSpring, animated } from 'react-spring';
 import Node from './List-Node';
 import ListForm from './List-Form';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const LinkedList = () => {
+    // State of the list in List-Form is pushed up to this LinkedList component
     const [list, setList] = useState([]);
 
     const [key, setKey] = useState(1);
   
     const scrolling = useSpring({
-      from: { transform: "translate(60%,0)" },
-      to: { transform: "translate(-60%,0)" },
-      config: { duration: 20000 },
-      reset: true,
-      //reverse: key % 2 == 0,
-      onRest: () => {
-        setKey(key + 1);
-      }
+      from: { transform: "translateX(0px)" },
+      to: { transform: "translateX(100px)" },
+      config: { duration: 500 },
+      reset: false
     })
   
+    const listItems = list.map((element) => <Col key={element}><Node value={element}></Node></Col>)
     return (
-      <div>
-        <div key={key} style={{paddingTop:120}}>
-          <animated.div style={scrolling}><Node/></animated.div>
-        </div>
+      <Container style={{paddingTop:40}}>
+        <Row>
+          {/* <animated.div style={scrolling}> */}
+            {listItems}
+          {/* </animated.div> */}
+        </Row>
         <ListForm list={list} onListChange={setList}/>
-        <h2>{list}</h2>
-      </div>
+      </Container>
     )
   }
   

@@ -3,7 +3,7 @@ import React from 'react'
 const  Node = (props) => {
     return(
         <div className="node">
-            Test
+            {props.value}
         </div>
     )
 }
