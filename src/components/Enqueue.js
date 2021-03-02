@@ -13,7 +13,7 @@ const Enqueue = ({enqueue}) => {
   return (
     <form onSubmit={onSubmit}>
       <Button type="submit" className="my-1">Enqueue</Button>
-      <input className='enqueue' type='text' value={entry} onChange={(e) => setEntry(e.target.value)} />
+      <input className='enqueue' type='number' value={entry} onChange={(e) => setEntry(e.target.value)} />
     </form>
   )
 }
