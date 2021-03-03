@@ -4,7 +4,6 @@ import { Button} from 'react-bootstrap';
 const Dequeue = ({dequeue}) => {
   
   const onClick = (e) => {
-      e.preventDefault()
       dequeue()
   }
 
