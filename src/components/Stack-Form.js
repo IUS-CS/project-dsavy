@@ -7,7 +7,7 @@ const ListForm = ({list, onListChange}) => {
     }
 
     const onInsert = e => {
-            
+        // Insert
     }
 
     const onRemove = e => {
@@ -42,6 +42,17 @@ const ListForm = ({list, onListChange}) => {
             </Row>
             <Row style={{justifyContent:'left', fontSize:20, fontWeight:500, paddingTop:15}}>
                 Remove
+            </Row>
+            <Row style={{justifyContent:'left'}}>
+                <Form inline onSubmit={onRemove}>
+                    <Button type="submit" className="my-1" style={{marginRight: 5}}>Pop</Button>
+                    <Form.Label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">
+                        Element on the Top
+                    </Form.Label>
+                </Form>
+            </Row>
+            <Row style={{justifyContent:'left', fontSize:20, fontWeight:500, paddingTop:15}}>
+                Peek
             </Row>
             <Row style={{justifyContent:'left'}}>
                 <Form inline onSubmit={onRemove}>
