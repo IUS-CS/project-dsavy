@@ -2,31 +2,15 @@ import React, { useState } from 'react';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 
 const ListForm = ({list, onListChange}) => {
-    const handleChange = e => {
-        onListChange(e);
-    }
+    const [queue, setQueue] = useState([])
 
-    const onInsert = e => {
-        // Insert
+    const onPush = ({entry}) => {
+      setQueue(queue.concat(entry))
     }
-
-    const onRemove = e => {
-        e.preventDefault()
-        const formData = new FormData(e.target),
-              formDataObj = Object.fromEntries(formData.entries());
-        console.log(formDataObj);
-        let listCopy = [...list];
-        if (formDataObj.Place === 'Tail') {
-            listCopy.splice((listCopy.length - 1), 1);
-        }
-        else {
-            listCopy.splice(formDataObj.Place, 1);
-        }
-        
-        handleChange(listCopy);
-        console.log(list);
+  
+    const onPop = () => {
+      setQueue(queue.slice(1))
     }
-
 
     return (
         <Container fluid style={{paddingTop:60, paddingLeft: 60}}>
@@ -34,7 +18,7 @@ const ListForm = ({list, onListChange}) => {
                 Insert
             </Row>
             <Row style={{justifyContent:'left'}}>
-            <Form inline onSubmit={onInsert}>
+            <Form inline onSubmit={onPush}>
                 <Form.Control className="my-1 mr-2" type="text" name="Value" placeholder="Value" />
                 
                 <Button type="submit" className="my-1">Push</Button>
@@ -44,7 +28,7 @@ const ListForm = ({list, onListChange}) => {
                 Remove
             </Row>
             <Row style={{justifyContent:'left'}}>
-                <Form inline onSubmit={onRemove}>
+                <Form inline onSubmit={onPop}>
                     <Button type="submit" className="my-1" style={{marginRight: 5}}>Pop</Button>
                     <Form.Label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">
                         Element on the Top
