@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import Push from './Push'
+import Pop from './Pop'
 
 const ListForm = ({list, onListChange}) => {
-    const [queue, setQueue] = useState([])
+    const [stack, setStack] = useState([])
 
     const onPush = ({entry}) => {
-      setQueue(queue.concat(entry))
+      setStack([entry].concat(stack))
     }
   
     const onPop = () => {
-      setQueue(queue.slice(1))
+      setStack(stack.slice(1))
     }
 
     return (
@@ -18,34 +20,20 @@ const ListForm = ({list, onListChange}) => {
                 Insert
             </Row>
             <Row style={{justifyContent:'left'}}>
-            <Form inline onSubmit={onPush}>
-                <Form.Control className="my-1 mr-2" type="text" name="Value" placeholder="Value" />
-                
-                <Button type="submit" className="my-1">Push</Button>
-            </Form>
+            
+                <Push push={onPush} />
+                {/* <Button type="submit" className="my-1">Push</Button> */}
             </Row>
             <Row style={{justifyContent:'left', fontSize:20, fontWeight:500, paddingTop:15}}>
                 Remove
             </Row>
             <Row style={{justifyContent:'left'}}>
                 <Form inline onSubmit={onPop}>
-                    <Button type="submit" className="my-1" style={{marginRight: 5}}>Pop</Button>
-                    <Form.Label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">
-                        Element on the Top
-                    </Form.Label>
+                    <Pop pop={onPop} />
+                    Element on the Top
                 </Form>
             </Row>
-            <Row style={{justifyContent:'left', fontSize:20, fontWeight:500, paddingTop:15}}>
-                Peek
-            </Row>
-            <Row style={{justifyContent:'left'}}>
-                <Form inline onSubmit={onRemove}>
-                    <Button type="submit" className="my-1" style={{marginRight: 5}}>Pop</Button>
-                    <Form.Label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">
-                        Element on the Top
-                    </Form.Label>
-                </Form>
-            </Row>
+            <div className='stack'>{stack.map((entry) => (<li>{entry}</li>))}</div> 
         </Container>
     )
 }
