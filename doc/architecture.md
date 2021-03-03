@@ -21,7 +21,7 @@ DSAVY's purpose is to provide animation to operations on data structures, such a
 ## Architecture Diagram
 
 Data flow:
-![](images/diagram1.png)
+![Data Flow](/doc/images/diagram1.png?raw=true)
 
 Data structure/Algorithm Architecture components:
-![](images/diagram2.png)
+![Components](/doc/images/diagram2.png?raw=true)
