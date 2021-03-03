@@ -4,7 +4,7 @@
   * [Architectural Representation](#architectural-representation)
   * [Architectural Diagram](#architecture-diagram)
     + [Data Flow](#data-flow)
-    + [Data Structure/Algorithm Component Architecture](#data-structure/algorithm-component-architecture)
+    + [Data Structure and Algorithm Component Architecture](#data-structure-and-algorithm-component-architecture)
 
 ## Introduction
 
@@ -25,5 +25,5 @@ DSAVY's purpose is to provide animation to operations on data structures, such a
 ### Data Flow
 ![Data Flow](/doc/images/diagram1.png?raw=true)
 
-### Data Structure/Algorithm Component Architecture
+### Data Structure and Algorithm Component Architecture
 ![Components](/doc/images/diagram2.png?raw=true)
