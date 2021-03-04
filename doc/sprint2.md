@@ -19,8 +19,10 @@ Members present:
   
   Here are screenshots of what we did:
   
-  ![Homepage](/doc/images/homepage.PNG?raw=true)
-  ![Linked List](/doc/images/linkedlist.PNG?raw=true)
+  ![Homepage](/doc/images/Sprint2.PNG?raw=true)
+  ![Linked List](/doc/images/Sprint2List.PNG?raw=true)
+  ![Stack](/doc/images/Sprint2Stack.PNG?raw=true)
+  ![Queue](/doc/images/Sprint2Queue.PNG?raw=true)
   
   ## Retro
   
