@@ -12,7 +12,10 @@ Members present:
   
   This sprint, we completed:
 
-    * 
+    * Adding a functional linked list
+    * Adding animation to the linked list
+    * Adding a functional stack and queue
+    * Changing the cards layout for the data structures on homepage
   
   Here are screenshots of what we did:
   
