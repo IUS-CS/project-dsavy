@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
-import Check from '../Input-Checker';
+import Check from '../Char-Limit-Error';
 
 const ListForm = ({list, onListChange}) => {
     const handleChange = e => {
