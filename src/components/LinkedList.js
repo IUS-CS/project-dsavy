@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useSpring, animated } from 'react-spring';
 import Node from './List-Node';
-import ListForm from './List-Form';
+import ListForm from './Forms/List-Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
