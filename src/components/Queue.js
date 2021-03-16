@@ -24,10 +24,10 @@ const Queue = () => {
   }
   
   const transition = useTransition(queue, entry => entry.key, {
-    initial: { transform: 'translate3d(0px, 0px, 0)' },
-    from: { transform: 'translate3d(0,-60px,0)'},
-    enter: { transform: 'translate3d(0,0px,0)'},
-    leave: { transform: 'translate3d(0px,100px,0)' }, 
+    initial: { opacity: 0, display: 'inline'},
+    from: { opacity: 0, display: 'inline' },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 }, 
     
   })
 
@@ -39,13 +39,11 @@ const Queue = () => {
       </header>
       <Enqueue enqueue={onAdd} />
       <Dequeue dequeue={onDelete} />
-      <Row style={{ display: "inline-flex", paddingTop: 20, paddingLeft: 45 }}>
       <ul className='queue'>
       {transition.map(({item, props, key}) => 
-        <animated.div key={key} style={props}><li>{item.element}</li></animated.div>
+        <animated.div key={key} style={props}><li style={{backgroundColor: 'red', borderRadius:'5px', padding:'5px'}}>{item.element}</li></animated.div>
       )}
       </ul>
-      </Row>
       
       
       
