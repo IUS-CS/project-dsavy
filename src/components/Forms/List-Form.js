@@ -11,7 +11,35 @@ const ListForm = ({list, onListChange}) => {
         const formData = new FormData(e.target),
               formDataObj = Object.fromEntries(formData.entries());
         if (formDataObj.Place === 'Tail'){
-            handleChange(list => list.concat(formDataObj.Value));
+            handleChange(list => list.concat({key: list.length, item: formDataObj.Value}));
+        }
+        else if (formDataObj.Place === '0'){
+            let newList = [{key: 0, item: formDataObj.Value}];
+            for (let i = 0; i < list.length; i++) {
+                list[i].key = i + 1;
+                newList.push(list[i]);
+            }
+            handleChange(list => newList);
+        }
+        else {
+            let currentKey = parseInt(formDataObj.Place);
+            let newItem = {key: currentKey, item: formDataObj.Value};
+            let newList = [];
+            
+            for (let i = 0; i < list.length + 1; i++) {
+                if (currentKey === i) {
+                    newList.push(newItem);
+                }
+                else if (currentKey > i) {
+                    list[i].key = i;
+                    newList.push(list[i]);
+                }
+                else if (currentKey < i) {
+                    list[i - 1].key = i;
+                    newList.push(list[i - 1]);
+                }
+            }
+            handleChange(list => newList);
         }
         console.log(list);
       }

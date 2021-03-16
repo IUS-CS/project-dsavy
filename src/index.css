@@ -14,7 +14,7 @@ body {
 }
 
 .node {
-    position: absolute;
+    position: relative;
     border-radius: 10px;
     padding-top: .27em;
     width: 3em;
@@ -34,6 +34,7 @@ body {
 
     width: 50px;
     height: 3px;
+    
 }
 .node::before {
     z-index: -1;
@@ -41,7 +42,6 @@ body {
     position: absolute;
     left: 84px;
     bottom: 11.5px;
-
     width: 0;
     height: 0;
     border-top: 6px solid transparent;
