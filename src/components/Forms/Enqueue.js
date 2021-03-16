@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 const Enqueue = ({enqueue}) => {
   const [entry, setEntry] = useState('')
