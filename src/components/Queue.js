@@ -43,11 +43,7 @@ const Queue = () => {
         <animated.div key={key} style={props}><li style={{backgroundColor: 'red', borderRadius:'5px', padding:'5px'}}>{item.element}</li></animated.div>
       )}
       </ul>
-      
-      
-      
     </Container>
-
   )}
 
 export default Queue
