@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
-import Enqueue from './Enqueue'
-import Dequeue from './Dequeue'
+import Enqueue from './Forms/Enqueue'
+import Dequeue from './Forms/Dequeue'
 
 const Queue = () => {
   const [queue, setQueue] = useState([])
