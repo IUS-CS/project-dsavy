@@ -35,7 +35,6 @@ const Queue = () => {
         <h1>Queue</h1>
         <h1>FIFO: First In First Out</h1>
       </header>
-      
       <Row><Enqueue enqueue={onAdd} /></Row>
       <Row><Dequeue dequeue={onDelete} /></Row>
       <ul className='queue'>
