@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Enqueue renders correctly 1`] = `
+<div>
+  <header
+    className="header"
+  >
+    <h1>
+      Queue
+    </h1>
+    <h1>
+      FIFO: First In First Out
+    </h1>
+  </header>
+  <form
+    onSubmit={[Function]}
+  >
+    <button
+      className="my-1 btn btn-primary"
+      disabled={false}
+      type="submit"
+    >
+      Enqueue
+    </button>
+    <input
+      className="enqueue"
+      onChange={[Function]}
+      type="number"
+      value=""
+    />
+  </form>
+  <button
+    className="my-1 btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    Dequeue
+  </button>
+  <div
+    className="queue"
+  />
+</div>
+`;
