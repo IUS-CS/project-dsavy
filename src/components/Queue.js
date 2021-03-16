@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
-import {useSpring, animated, useTransition} from 'react-spring'
-import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import {animated, useTransition} from 'react-spring'
 import Enqueue from './Enqueue'
 import Dequeue from './Dequeue'
 
@@ -17,8 +16,6 @@ const Queue = () => {
   }
 
   const onDelete = () => {
-    let a = queue
-    a.slice(1)
     setQueue(queue.slice(1))
     setIndex(index - 1)
   }
