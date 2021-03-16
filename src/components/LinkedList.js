@@ -2,16 +2,12 @@ import React, {useState} from 'react';
 import { useTransition, animated } from 'react-spring';
 import Node from './List-Node';
 import ListForm from './Forms/List-Form';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const LinkedList = () => {
     // State of the list in List-Form is pushed up to this LinkedList component
-    const [list, setList] = useState([
-      {key: 1, item: "one"},
-      {key: 2, item: "two"}
-    ]);
+    const [list, setList] = useState([]);
 
     const [key, setKey] = useState(1);
   
@@ -24,26 +20,33 @@ const LinkedList = () => {
   
     const listItems = list.map((element) => <Col key={element}><Node value={element}></Node></Col>)
     return (
-      // <Container style={{paddingTop:40}}>
-      //   <Row>
-      //     {/* <animated.div style={scrolling}> */}
-      //       {listItems}
-      //     {/* </animated.div> */}
-      //   </Row>
-      //   <ListForm list={list} onListChange={setList}/>
-      // </Container>
+    //   <div>
+    //     <ListForm list={list} onListChange={setList}/>
+    //   <div style={{display:"inline-flex", paddingTop:20}}>
+    //   {transitions.map(({ item, props, key }) =>
+    //   <animated.div  
+    //     key={key} 
+    //     style={props}>
+    //     <Node value={item.item} style={{margin:20}}/>
+    //     <Pointer></Pointer>
+    //   </animated.div>
+    // )}
+    // </div>
+    // </div>
       <div>
-        <ListForm list={list} onListChange={setList}/>
-      <div style={{display:"inline-flex", justifyContent:"center"}}>
-      {transitions.map(({ item, props, key }) =>
-      <animated.div 
-        key={key} 
-        style={props}>
-        <Node value={item.item}/>
-      </animated.div>
-    )}
-    </div>
-    </div>
+        <ListForm list={list} onListChange={setList} />
+        <Row style={{ display: "inline-flex", paddingTop: 20, paddingLeft: 45 }}>
+          {transitions.map(({ item, props, key }) =>
+            <animated.div
+              key={key}
+              style={props}>
+              <Col>
+                <Node value={item.item} style={{ margin: 20 }} />
+              </Col>
+            </animated.div>
+          )}
+        </Row>
+      </div>
     )
   }
   
