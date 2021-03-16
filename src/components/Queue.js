@@ -23,8 +23,8 @@ const Queue = () => {
   const transition = useTransition(queue, entry => entry.key, {
     initial: { opacity: 0, display: 'inline'},
     from: { opacity: 0, display: 'inline' },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 }, 
+    enter: { opacity: 1, transition: 'opacity .5s'},
+    leave: { opacity: 0, transition: 'opacity .5s' }, 
     
   })
 
