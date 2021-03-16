@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {animated, useTransition} from 'react-spring'
+import {Container, Row, Col} from 'react-bootstrap';
 import Enqueue from './Enqueue'
 import Dequeue from './Dequeue'
 
@@ -29,13 +30,14 @@ const Queue = () => {
   })
 
   return (
-    <div>
+    <Container>
       <header className='header'>
         <h1>Queue</h1>
         <h1>FIFO: First In First Out</h1>
       </header>
-      <Enqueue enqueue={onAdd} />
-      <Dequeue dequeue={onDelete} />
+      
+      <Row><Enqueue enqueue={onAdd} /></Row>
+      <Row><Dequeue dequeue={onDelete} /></Row>
       <ul className='queue'>
       {transition.map(({item, props, key}) => 
         <animated.div key={key} style={props}><li style={{backgroundColor: 'red', borderRadius:'5px', padding:'5px'}}>{item.element}</li></animated.div>
@@ -44,8 +46,8 @@ const Queue = () => {
       
       
       
-    </div>
-  )
-}
+    </Container>
+
+  )}
 
 export default Queue
