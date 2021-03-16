@@ -14,7 +14,7 @@ body {
 }
 
 .node {
-    position: absolute;
+    position: static;
     border-radius: 10px;
     padding-top: .27em;
     width: 3em;
