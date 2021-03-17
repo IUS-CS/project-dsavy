@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import {animated, useTransition} from 'react-spring'
 import {Container, Row, Col} from 'react-bootstrap';
-import Enqueue from './Enqueue'
-import Dequeue from './Dequeue'
+import Enqueue from './Forms/Enqueue'
+import Dequeue from './Forms/Dequeue'
 
 const Queue = () => {
   const [queue, setQueue] = useState([])
