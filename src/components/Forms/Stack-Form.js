@@ -14,6 +14,11 @@ const ListForm = () => {
     const [value, setValue] = useState('');
     const [count, setCount] = useState(0);
 
+    function onPush(event) {
+        event.preventDefault();
+        setCount(count + 1);
+        setStack(stack.concat([<Row key={count}><StackNode id={count} value={value} /></Row>]));
+    }
 
     function handleChange(event) {
         setValue(event.target.value);
