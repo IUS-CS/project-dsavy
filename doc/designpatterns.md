@@ -15,3 +15,7 @@ its specfic operations. The chain of responsibilty is passed from the form to th
 ## Strategy 
 We plan to incorporate the design pattern, strategy, becuase we have many data structures that are built from the same underlying 
 data structure, such as an array for the linear data structures we have (Linked List, Queue, Stack). This means that we can have different components that isolate the algorithms for each of those data structures but their implementation is still through an array. This gives us the ability to write components for the algorithms to manipulate the array and have one main array component that holds the state of that data structure.  
+
+## Plan for future module design
+Moving foward we plan to consolidate our components and incorporate the strategy design pattern more. This will enable us to have a cleaner
+/src directory and simpler code by having components that can handle more than one data structure. We will continue to use chain of responsibilty so our user input is at the end of the 'chain' and we will pass that responsibilty (data) down to the specific components. 
