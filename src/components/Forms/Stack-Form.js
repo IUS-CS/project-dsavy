@@ -23,7 +23,12 @@ const ListForm = () => {
     function handleChange(event) {
         setValue(event.target.value);
     }
-
+  
+    function onPop(event) {
+        event.preventDefault();
+        setCount(count - 1);
+        setStack(stack.slice(0, stack.length-1));
+    }
     
     return (
         <Container fluid style={{paddingTop:60, paddingLeft: 30}}>
