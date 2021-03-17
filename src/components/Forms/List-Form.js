@@ -1,48 +1,60 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import Check from '../Char-Limit-Error';
 
 const ListForm = ({list, onListChange}) => {
     const handleChange = e => {
         onListChange(e);
     }
 
+    const [validLength, setValidLength] = useState(true);
+
     const onInsert = e => {
         e.preventDefault()
         const formData = new FormData(e.target),
               formDataObj = Object.fromEntries(formData.entries());
-        if (formDataObj.Place === 'Tail'){
-            handleChange(list => list.concat({key: list.length, item: formDataObj.Value}));
-        }
-        else if (formDataObj.Place === '0'){
-            let newList = [{key: 0, item: formDataObj.Value}];
-            for (let i = 0; i < list.length; i++) {
-                list[i].key = i + 1;
-                newList.push(list[i]);
-            }
-            handleChange(list => newList);
+
+        // Check length of new element is not over limit
+        if (formDataObj.Value.length > 6) {
+            setValidLength(false);
         }
         else {
-            let currentKey = parseInt(formDataObj.Place);
-            let newItem = {key: currentKey, item: formDataObj.Value};
-            let newList = [];
-            
-            for (let i = 0; i < list.length + 1; i++) {
-                if (currentKey === i) {
-                    newList.push(newItem);
-                }
-                else if (currentKey > i) {
-                    list[i].key = i;
+            setValidLength(true);
+            if (formDataObj.Place === 'Tail'){
+                handleChange(list => list.concat({key: list.length, item: formDataObj.Value}));
+            }
+            else if (formDataObj.Place === '0'){
+                let newList = [{key: 0, item: formDataObj.Value}];
+                for (let i = 0; i < list.length; i++) {
+                    list[i].key = i + 1;
                     newList.push(list[i]);
                 }
-                else if (currentKey < i) {
-                    list[i - 1].key = i;
-                    newList.push(list[i - 1]);
-                }
+                handleChange(list => newList);
             }
-            handleChange(list => newList);
+            else {
+                let currentKey = parseInt(formDataObj.Place);
+                let newItem = {key: currentKey, item: formDataObj.Value};
+                let newList = [];
+                
+                for (let i = 0; i < list.length + 1; i++) {
+                    if (currentKey === i) {
+                        newList.push(newItem);
+                    }
+                    else if (currentKey > i) {
+                        list[i].key = i;
+                        newList.push(list[i]);
+                    }
+                    else if (currentKey < i) {
+                        list[i - 1].key = i;
+                        newList.push(list[i - 1]);
+                    }
+                }
+                handleChange(list => newList);
+            }
+            console.log(list);
+          }
         }
-        console.log(list);
-      }
+        
 
     const onRemove = e => {
         e.preventDefault()
@@ -63,6 +75,8 @@ const ListForm = ({list, onListChange}) => {
 
 
     return (
+        <div>
+        <Check input={validLength}></Check>
         <Container fluid style={{paddingTop:60}}>
             <Row style={{justifyContent:'center', fontSize:20, fontWeight:500, paddingTop:15}}>
                 Insert
@@ -114,6 +128,7 @@ const ListForm = ({list, onListChange}) => {
                 </Form>
             </Row>
         </Container>
+        </div>
     )
 }
 
