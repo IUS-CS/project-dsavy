@@ -3,8 +3,8 @@ import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 
 const StackNode = (props) => {
     return (
-        <div style={{position: 'absolute', backgroundColor: '#58C2ED', width: '18rem', height: '3rem', border: 'solid', bottom: `${props.id*3}rem`, right: '-2.5px', borderBottom: '0'}}>
-            <h3 style={{textAlign: 'center'}}>{props.value}</h3>
+        <div style={{position: 'absolute', background: "linear-gradient(#58C2ED, #1B85DC)", width: '18rem', height: '3rem', border: 'solid', bottom: `${props.id*3}rem`, right: '-2.5px', borderBottom: '0'}}>
+            <h4 style={{textAlign: 'center', color: 'white', fontWeight: '550'}}>{props.value}</h4>
         </div>
     );
 }
@@ -50,8 +50,8 @@ const ListForm = () => {
             <Row style={{justifyContent:'left'}}>
                 <Form inline onSubmit={onPop}>
                     <Button type="submit" className="my-1" style={{}}>Pop</Button>
-                    <Form.Label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">
-                        Element on Top
+                    <Form.Label className="my-1 mr-2">
+                        The Element on Top
                     </Form.Label>
                 </Form>
             </Row>
