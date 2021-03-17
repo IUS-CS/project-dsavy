@@ -10,7 +10,16 @@ const StackNode = (props) => {
 }
 
 const ListForm = () => {
+    const [stack, setStack] = useState([]);
+    const [value, setValue] = useState('');
+    const [count, setCount] = useState(0);
 
+
+    function handleChange(event) {
+        setValue(event.target.value);
+    }
+
+    
     return (
         <Container fluid style={{paddingTop:60, paddingLeft: 30}}>
             <Row style={{justifyContent:'left', fontSize:20, fontWeight:500, paddingTop:15}}>
@@ -37,6 +46,7 @@ const ListForm = () => {
                 </Form>
             </Row>
             
+            {/* this div holds the stack nodes */}
             <div id="stackbox" style={{width: '18rem', height: '28rem', position: 'relative', right: '9rem', bottom: '12rem', left: '42rem', marginBottom: '2rem', border: 'solid', borderTop: 0}}>
                 {stack}
             </div>
