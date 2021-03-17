@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page renders correctly 1`] = `
+<div
+  className="container-sm"
+>
+  <div
+    className="row"
+    style={
+      Object {
+        "paddingTop": 40,
+      }
+    }
+  >
+    <div
+      className="col"
+    >
+      <a
+        href="/linkedlist"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="custom-card card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            className="card-img-top"
+            src="../images/LinkedList.png"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Linked List
+            </div>
+            <p
+              className="card-text"
+            >
+              Text...
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col"
+    >
+      <a
+        href="/stack"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="custom-card card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            className="card-img-top"
+            src="../images/Stack.png"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Stack
+            </div>
+            <p
+              className="card-text"
+            >
+              Text...
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col"
+    >
+      <a
+        href="/queue"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="custom-card card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            className="card-img-top"
+            src="../images/LinkedList.png"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Queue
+            </div>
+            <p
+              className="card-text"
+            >
+              Text...
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div
+    className="row"
+    style={
+      Object {
+        "paddingTop": 40,
+      }
+    }
+  >
+    <div
+      className="col"
+    >
+      <a
+        href="/about"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="custom-card card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            className="card-img-top"
+            src="../images/LinkedList.png"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Linked List
+            </div>
+            <p
+              className="card-text"
+            >
+              Text...
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col"
+    >
+      <a
+        href="/about"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="custom-card card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            className="card-img-top"
+            src="../images/LinkedList.png"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Linked List
+            </div>
+            <p
+              className="card-text"
+            >
+              Text...
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col"
+    >
+      <a
+        href="/about"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="custom-card card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            className="card-img-top"
+            src="../images/LinkedList.png"
+          />
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-title h5"
+            >
+              Linked List
+            </div>
+            <p
+              className="card-text"
+            >
+              Text...
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;

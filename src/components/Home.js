@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 import ClickableImage from './Home-image';
 
-function Home() {
+const Home = () => {
   return (
       <Container fluid='sm'>
         <Row style={{paddingTop:40}}>
