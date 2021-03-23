@@ -20,10 +20,10 @@ Members present:
   
   Here are screenshots of what we did:
   
-  ![Linked List](/doc/images/Sprint3List)
-  ![Stack](/doc/images/Sprint3Stack)
-  ![Queue](/doc/images/Sprint3Queue)
-  ![About Page](/doc/images/Sprint3About)
+  ![Linked List](/doc/images/Sprint3List.PNG?raw=true)
+  ![Stack](/doc/images/Sprint3Stack.PNG?raw=true)
+  ![Queue](/doc/images/Sprint3Queue.PNG?raw=true)
+  ![About Page](/doc/images/Sprint3About.PNG?raw=true)
   
   ## Retro
   
