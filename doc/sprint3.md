@@ -20,10 +20,10 @@ Members present:
   
   Here are screenshots of what we did:
   
-  ![Homepage](/doc/images/)
-  ![Linked List](/doc/images/)
-  ![Stack](/doc/images/)
-  ![Queue](/doc/images/)
+  ![Linked List](/doc/images/Sprint3List)
+  ![Stack](/doc/images/Sprint3Stack)
+  ![Queue](/doc/images/Sprint3Queue)
+  ![About Page](/doc/images/Sprint3About)
   
   ## Retro
   
@@ -50,7 +50,7 @@ Members present:
   
   Points | Story
   -------|--------
-  3      | As developers, we would like to have a page describing DSAVY
-  8      | As a user, I would like to have a clean and consistent UI to interact with the data structures
-  8      | As developers, we would like to have more testing on our project
-  13     | As a user, I would like to have good looking animations for the data structures 
+  8      | As a user I would like to sort at least one data structure.
+  8      | As a user I would like to be able to see a recursive algorithm. 
+  5      | As a user I would like to see an improved queue user interface/animation.
+  13     | As developers we would like to have more testing in the project. 
