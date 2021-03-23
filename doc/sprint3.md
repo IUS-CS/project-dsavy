@@ -16,7 +16,7 @@ Members present:
     * Improving animation to the stack
     * Adding full animation to the linked list
     * Updating the about page
-    * Added more unit tests
+    * Adding more unit tests
   
   Here are screenshots of what we did:
   
