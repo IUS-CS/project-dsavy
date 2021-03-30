@@ -19,10 +19,12 @@ const Queue = () => {
     bottom: '-2.5px'
   }
 
+  // updates state of array 
   const onAdd = (entry) => {
     setArray(enqueue(array, entry))
   }
 
+  // returns array with number added to the end
   const enqueue = (queue, number) => {
     if (number == '') {
       alert('Enter number')
@@ -44,10 +46,12 @@ const Queue = () => {
     return queue
   }
 
+  // updates state of array
   const onDelete = () => {
     setArray(dequeue(array))
   }
 
+  // returns array with first element deleted
   const dequeue = (queue) => {
     setIndex(index - 1)
     return queue.splice(1)  
