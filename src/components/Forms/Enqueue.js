@@ -6,7 +6,7 @@ const Enqueue = ({enqueue}) => {
   
   const onSubmit = (e) => {
       e.preventDefault()
-      enqueue({entry})
+      enqueue(entry)
       setEntry('')
   }
 
