@@ -5,7 +5,7 @@ import Enqueue from './Forms/Enqueue'
 import Dequeue from './Forms/Dequeue'
 
 const Queue = () => {
-  const [queue, setQueue] = useState([])
+  const [array, setArray] = useState([])
   const [index, setIndex] = useState(0)
   
   const queueStyle =  {
@@ -18,9 +18,13 @@ const Queue = () => {
     height: '18rem',
     bottom: '-2.5px'
   }
- 
-  const onAdd = ({entry}) => {
-    if (entry == '') {
+
+  const onAdd = (entry) => {
+    setArray(enqueue(array, entry))
+  }
+
+  const enqueue = (queue, number) => {
+    if (number == '') {
       alert('Enter number')
       return
     }
@@ -30,36 +34,40 @@ const Queue = () => {
       return
     }
 
-    if (Math.abs(entry) > 999) {
+    if (Math.abs(number) > 999) {
       alert('Number must be 3 digits or less')
       return
     }
-
-    let a = queue
-    a.push({key: index, element: entry})
-    setQueue(a)
+    
+    queue.push({key: index, element: number})
     setIndex(index + 1)
+    return queue
   }
 
   const onDelete = () => {
-    setQueue(queue.slice(1))
-    setIndex(index - 1)
+    setArray(dequeue(array))
   }
+
+  const dequeue = (queue) => {
+    setIndex(index - 1)
+    return queue.splice(1)  
+  }
+
   
-  const transition = useTransition(queue, entry => entry.key, {
+  const transition = useTransition(array, entry => entry.key, {
     initial: {opacity: 0},
     from: {opacity: 0},
     enter: {opacity: 1, transition: 'opacity .25s'},
     leave: {opacity: 0, transition: 'opacity .25s', color: 'red'}
   })
 
-  // display queue with animation when added to or removed
+  // display array with animation when added to or removed
   const displayQueue = () => {
     console.log("hello")
     return (transition.map(({item, props, key}) =>         
       <animated.div key={key} style={props}>
         <li style={{listStyle: 'none'}}>
-          <Col style={Object.assign({border: 'solid', borderLeft: 0, left: `${queue.indexOf(item)*5}rem`}, queueStyle)} >
+          <Col style={Object.assign({border: 'solid', borderLeft: 0, left: `${array.indexOf(item)*5}rem`}, queueStyle)} >
             <h4 style={{color: 'white'}}>{item.element}</h4>
           </Col>
         </li>
@@ -81,6 +89,7 @@ const Queue = () => {
         </div>
       </Row>
     </Container>
-  )}
+  )
+}
 
 export default Queue
