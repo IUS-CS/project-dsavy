@@ -18,45 +18,45 @@ const Queue = () => {
     height: '18rem',
     bottom: '-2.5px'
   }
-
+  
   // updates state of array 
   const onAdd = (entry) => {
     setArray(enqueue(array, entry))
+    setIndex(index + 1)
   }
 
   // returns array with number added to the end
   const enqueue = (queue, number) => {
     if (number == '') {
       alert('Enter number')
-      return
+      return queue
     }
-
+    
     if (queue.length > 9) {
       alert('Queue is at max length')
-      return
+      return queue
     }
 
     if (Math.abs(number) > 999) {
       alert('Number must be 3 digits or less')
-      return
+      return queue
     }
     
     queue.push({key: index, element: number})
-    setIndex(index + 1)
+    
     return queue
   }
 
   // updates state of array
   const onDelete = () => {
     setArray(dequeue(array))
+    setIndex(index + 1)
   }
 
   // returns array with first element deleted
   const dequeue = (queue) => {
-    setIndex(index - 1)
     return queue.splice(1)  
   }
-
   
   const transition = useTransition(array, entry => entry.key, {
     initial: {opacity: 0},
