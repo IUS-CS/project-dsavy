@@ -47,8 +47,22 @@ exports[`Enqueue renders correctly 1`] = `
       Dequeue
     </button>
   </div>
-  <ul
-    className="queue"
-  />
+  <div
+    className="row"
+  >
+    <div
+      style={
+        Object {
+          "border": "solid",
+          "height": "18rem",
+          "margin": "0 auto",
+          "position": "relative",
+          "width": "50rem",
+        }
+      }
+    >
+      <ul />
+    </div>
+  </div>
 </div>
 `;
