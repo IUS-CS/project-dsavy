@@ -51,4 +51,4 @@ Members present:
   3      | As developers, we would like to have a page describing DSAVY
   8      | As a user, I would like to have a clean and consistent UI to interact with the data structures
   8      | As developers, we would like to have more testing on our project
-  13     | As a user, I would like to have good looking animations for the data structures 
+  13     | As a user, I would like to have good looking animations for the data structures
