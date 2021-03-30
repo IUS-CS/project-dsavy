@@ -7,6 +7,7 @@ import About from "./components/About"
 import LinkedList from "./components/LinkedList";
 import Queue from './components/Queue';
 import Stack from './components/Stack';
+import Recursion from "./components/Recursion";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path='/linkedlist' component={LinkedList} />
         <Route path='/queue' component={Queue} />
         <Route path='/stack' component={Stack} />
+        <Route path='/recursion' component={Recursion} />
     </Router>
   );
 }
