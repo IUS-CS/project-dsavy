@@ -11,7 +11,7 @@ const Home = () => {
           <Col><ClickableImage name='Queue' image='../images/LinkedList.png' page='/queue' description='Text...'/></Col>
         </Row>
         <Row style={{paddingTop:40}}>
-          <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about' description='Text...'/></Col>
+          <Col><ClickableImage name='Insertion Sort' image='../images/LinkedList.png' page='/insertionsort' description='Text...'/></Col>
           <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about' description='Text...'/></Col>
           <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about' description='Text...'/></Col>
         </Row>
