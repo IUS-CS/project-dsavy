@@ -151,7 +151,7 @@ exports[`Home page renders correctly 1`] = `
       className="col"
     >
       <a
-        href="/about"
+        href="/insertionsort"
         onClick={[Function]}
         style={
           Object {
@@ -178,7 +178,7 @@ exports[`Home page renders correctly 1`] = `
             <div
               className="card-title h5"
             >
-              Linked List
+              Insertion Sort
             </div>
             <p
               className="card-text"
