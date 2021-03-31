@@ -1,4 +1,5 @@
 # DSAVY Testing
+# All testing code is located in src/unit_tests
 
 ## Snapshot and Unit Testing
 
