@@ -16,18 +16,43 @@ const ListForm = () => {
 
     function onPush(event) {
         event.preventDefault();
-        setCount(count + 1);
-        setStack(stack.concat([<Row key={count}><StackNode id={count} value={value} /></Row>]));
+        setStack(push(stack, value));
     }
 
+    function push(array, value) {
+        if (value == '') {
+            alert('Enter number');
+            return array;
+        }
+      
+        if (array.length > 9) {
+            alert('Stack is at max length');
+            return array;
+        }
+      
+        if (Math.abs(value) > 999) {
+            alert('Number must be 3 digits or less');
+            return array;
+        }
+          
+        setCount(count + 1);
+        return array.concat([<Row key={count}><StackNode id={count} value={value} /></Row>]);
+    }
+    
     function handleChange(event) {
         setValue(event.target.value);
     }
-  
+    
     function onPop(event) {
         event.preventDefault();
         setCount(count - 1);
-        setStack(stack.slice(0, stack.length-1));
+        setStack(pop(stack));
+    }
+
+    function pop(array) {
+        if (array.length == 0) {return array}
+        array.pop()
+        return array
     }
     
     return (

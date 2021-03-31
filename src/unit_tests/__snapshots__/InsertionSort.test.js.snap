@@ -1,19 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Enqueue renders correctly 1`] = `
+exports[`Insertion Sort renders correctly 1`] = `
 <div
   className="container"
 >
-  <header
-    className="header"
-  >
-    <h1>
-      Queue
-    </h1>
-    <h1>
-      FIFO: First In First Out
-    </h1>
-  </header>
   <div
     className="row"
   >
@@ -25,7 +15,7 @@ exports[`Enqueue renders correctly 1`] = `
         disabled={false}
         type="submit"
       >
-        Enqueue
+        Insert
       </button>
       <input
         className="enqueue"
@@ -44,7 +34,17 @@ exports[`Enqueue renders correctly 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Dequeue
+      Remove
+    </button>
+  </div>
+  <div
+    className="row"
+  >
+    <button
+      className="my-1"
+      onClick={[Function]}
+    >
+      Sort
     </button>
   </div>
   <div
