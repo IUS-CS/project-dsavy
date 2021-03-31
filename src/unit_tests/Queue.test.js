@@ -51,3 +51,24 @@ describe('Testing enqueue', () => {
         expect(enqueue(array,'')).toStrictEqual([1,2,3,4,5,6,7,8]);
       })
 });
+
+describe('Testing enqueue', () => {
+    const dequeue = (queue) => {
+        return queue.splice(1)  
+    }
+
+    it('enqueue correctly', ()=>{
+      let array = [1]
+      expect(dequeue(array)).toStrictEqual([]);
+    })
+
+    it('enqueue does not add, number too large', ()=>{
+      let array = [1,2,3,4]
+      expect(dequeue(array)).toStrictEqual([2,3,4]);
+    })
+    
+    it('adds to empty queue', ()=>{
+      let array = []
+      expect(dequeue(array)).toStrictEqual([]);
+    })
+});
