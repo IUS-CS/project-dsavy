@@ -17,11 +17,9 @@ Members present:
     * Adding more and stronger tests
   
   Here are screenshots of what we did:
-  
-  ![Linked List](/doc/images/Sprint3List.PNG?raw=true)
-  ![Stack](/doc/images/Sprint3Stack.PNG?raw=true)
-  ![Queue](/doc/images/Sprint3Queue.PNG?raw=true)
-  ![About Page](/doc/images/Sprint3About.PNG?raw=true)
+ 
+  ![Queue](/doc/images/Sprint4Queue.PNG?raw=true)
+  ![Insertion Sort](/doc/images/Sprint4InsertionSort.PNG?raw=true)
   
   ## Retro
   
