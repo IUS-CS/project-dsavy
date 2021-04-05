@@ -12,11 +12,9 @@ Members present:
   
   This sprint, we completed:
 
-    * Improving animation to the queue
-    * Improving animation to the stack
-    * Adding full animation to the linked list
-    * Updating the about page
-    * Adding more unit tests
+    * Improving animation and interface for the queue
+    * Adding insertion sort algorithm
+    * Adding more and stronger tests
   
   Here are screenshots of what we did:
   
