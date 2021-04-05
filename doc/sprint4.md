@@ -48,7 +48,10 @@ Members present:
   
   Points | Story
   -------|--------
-  8      | As a user I would like to sort at least one data structure.
-  8      | As a user I would like to be able to see a recursive algorithm. 
-  5      | As a user I would like to see an improved insertion sort user interface/animation.
-  13     | As developers we would like to have more testing in the project. 
+  3      | As a user, I would like to see a cleaner home screen with unique elements.
+  8      | As a user, I would like to see better animation on the insertion sort. 
+  8      | As a user, I would like to see a completed recursion page.
+  8      | As developers, we would like to add more testing.
+  13     | As a user, I would like see a tree data structure
+
+
