@@ -1,4 +1,4 @@
-# Sprint 3 Ceremony Minutes
+# Sprint 4 Ceremony Minutes
   
 Date: 2021-04-05
 
@@ -50,5 +50,5 @@ Members present:
   -------|--------
   8      | As a user I would like to sort at least one data structure.
   8      | As a user I would like to be able to see a recursive algorithm. 
-  5      | As a user I would like to see an improved queue user interface/animation.
+  5      | As a user I would like to see an improved insertion sort user interface/animation.
   13     | As developers we would like to have more testing in the project. 
