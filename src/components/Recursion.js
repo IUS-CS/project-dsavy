@@ -50,7 +50,15 @@ const Recursion = () => {
         }, [delay])
     }
 
-    
+    const [i, setI] = useState(0)
+    useInterval(() => {
+        if (isRunning) {
+            if (i < fibFrames.length) {
+                setFrames(frames.concat([<Row key={i}>{fibFrames[i]}</Row>]))
+                setI(i + 1)
+            }
+        }
+    }, (delay !== null)? (delay*25): null)
 
     function handleVis(event) {
         event.preventDefault()
