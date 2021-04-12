@@ -113,7 +113,7 @@ const Recursion = () => {
                         as="select"
                         className="my-1 mr-sm-2"
                         name="method">
-                        <option value="0">Fibbonacci, n=4</option>
+                        <option value="0">Fibonacci, n=4</option>
                     </Form.Control>
                     <Button id="visualize" type="submit" className="my-1">Visualize</Button>
                 </Form>
