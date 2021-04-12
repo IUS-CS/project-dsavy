@@ -26,7 +26,15 @@ const Node = (props) => {
 
 const Recursion = () => {
     var [frames, setFrames] = useState([])
-    
+    const fibFrames = [<Node text={'returns fib(3) + fib(2)\nfib(4)'} frameNum={0} level={0}/>,
+                    <Node text={'returns fib(3) + fib(2)\nfib(4)'} frameNum={1} level={0}/>, <Node text={'returns fib(2) + fib(1)\nfib(3)'} frameNum={1} level={1}/>,
+                    <Node text={'returns fib(3) + fib(2)\nfib(4)'} frameNum={2} level={0}/>, <Node text={'returns fib(2) + fib(1)\nfib(3)'} frameNum={2} level={1}/>, <Node text={'returns fib(1) + fib(0)\nfib(2)'} frameNum={2} level={2}/>,
+                    <Node text={'returns fib(3) + fib(2)\nfib(4)'} frameNum={3} level={0}/>, <Node text={'returns fib(2) + fib(1)\nfib(3)'} frameNum={3} level={1}/>, <Node text={'returns fib(1) + fib(0)\nfib(2)'} frameNum={3} level={2}/>, <Node text={'returns 1\nfib(1)'} frameNum={3} level={3}/>,
+                    <Node text={'returns fib(3) + fib(2)\nfib(4)'} frameNum={4} level={0}/>, <Node text={'returns fib(2) + fib(1)\nfib(3)'} frameNum={4} level={1}/>, <Node text={'returns fib(1) + fib(0)\nfib(2)'} frameNum={4} level={2}/>, <Node text={'returns 1\nfib(1)'} frameNum={4} level={3}/>, <Node text={'returns 0\nfib(0)'} frameNum={4} level={4}/>,
+                    <Node text={'returns fib(3) + fib(2)\nfib(4)'} frameNum={5} level={0}/>, <Node text={'returns fib(2) + fib(1)\nfib(3)'} frameNum={5} level={1}/>, <Node text={'returns fib(1) + fib(0)\nfib(2)'} frameNum={5} level={2}/>, <Node text={'returns 1\nfib(1)'} frameNum={5} level={3}/>,
+                    <Node text={'returns fib(3) + fib(2)\nfib(4)'} frameNum={6} level={0}/>, <Node text={'returns fib(2) + fib(1)\nfib(3)'} frameNum={6} level={1}/>, <Node text={'returns 1 + 0\nfib(2)'} frameNum={6} level={2}/>,
+                    <Node text={'returns fib(3) + fib(2)\nfib(4)'} frameNum={7} level={0}/>, <Node text={'returns 1 + 1\nfib(3)'} frameNum={7} level={1}/>,
+                    <Node text={'returns 2 + 1\nfib(4)'} frameNum={8} level={0}/>]
     const [isRunning, setIsRunning] = useState(false) // 'Visualize' is pressed or not
     const [delay, setDelay] = useState(50) // initial speed is 50 (middle of slider)
 
