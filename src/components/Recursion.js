@@ -48,7 +48,10 @@ const Recursion = () => {
         delay !== null ? setDelay(null) : setDelay(document.getElementById("speed-range").value)
     }
 
-
+    const transition = useTransition(frames, item => item.key, {
+        from: {opacity: 0.5, transform: 'translate3d(0,10rem,0)'},
+        enter: {opacity: 1, transition: 'opacity .15s', transform: 'translate3d(0,22rem,0)'},
+    })
 
     const showFrames = () => {
         return (
