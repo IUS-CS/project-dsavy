@@ -2,7 +2,27 @@ import React, {useEffect, useState, useRef} from 'react';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 import {useTransition, animated} from 'react-spring';
 
-
+const Node = (props) => {
+    const styleSheet = {
+        position: 'absolute', 
+        padding: '2px',
+        background: "linear-gradient(#58C2ED, #1B85DC)",
+        width: '10rem', height: '3.5rem',
+        border: '2px solid',
+        bottom: `${props.level*3.5}rem`,
+        left: `${10*props.frameNum}rem`
+    }
+    const textStyle = {
+        textAlign: 'center',
+        color: 'white',
+        fontFamily: 'serif'
+    }
+    return (
+        <div style={styleSheet}>
+            <p style={textStyle}>{props.text.split('\n')[0]}<br/>{props.text.split('\n')[1]}</p>
+        </div>
+    );
+}
 
 const Recursion = () => {
     var [frames, setFrames] = useState([])
