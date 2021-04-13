@@ -34,6 +34,7 @@ exports[`Stack page renders correctly 1`] = `
     >
       <form
         className=""
+        data-testid="values"
       >
         <input
           className="my-1 mr-2 form-control"
