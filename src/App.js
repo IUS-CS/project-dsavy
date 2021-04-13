@@ -8,6 +8,7 @@ import LinkedList from "./components/LinkedList";
 import Queue from './components/Queue';
 import Stack from './components/Stack';
 import InsertionSort from './components/InsertionSort';
+import Recursion from './components/Recursion';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path='/queue' component={Queue} />
         <Route path='/stack' component={Stack} />
         <Route path='/insertionsort' component={InsertionSort} />
+        <Route path='/recursion' component={Recursion} />
     </Router>
   );
 }
