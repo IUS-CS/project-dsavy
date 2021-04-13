@@ -56,6 +56,11 @@ const Recursion = () => {
                     <Button type="submit" className="my-1">Reset</Button>
                 </Form>
             </Row>
+            <Row style={{position: 'relative', marginBottom: '2rem', border: '', width: '100%', height: '28rem'}}>
+                <div id="framebox">
+                    {showFrames()}
+                </div>
+            </Row>
         </Container>
     );
 }
