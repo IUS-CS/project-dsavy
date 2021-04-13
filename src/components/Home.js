@@ -12,7 +12,7 @@ const Home = () => {
         </Row>
         <Row style={{paddingTop:40}}>
           <Col><ClickableImage name='Insertion Sort' image='../images/LinkedList.png' page='/insertionsort' description='Text...'/></Col>
-          <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about' description='Text...'/></Col>
+          <Col><ClickableImage name='Recursion' image='../images/Recursion.png' page='/recursion' description='Text...'/></Col>
           <Col><ClickableImage name='Linked List' image='../images/LinkedList.png' page='/about' description='Text...'/></Col>
         </Row>
       </Container>
