@@ -51,7 +51,14 @@ const Recursion = () => {
 
 
 
-
+    const showFrames = () => {
+        return (
+            transition.map(({item, props, key}) => 
+            <animated.div key={key} style={props}>
+                {item}
+            </animated.div>)
+        )
+    }
 
     return(
         <Container fluid style={{paddingTop:30, paddingLeft: 30}}>
