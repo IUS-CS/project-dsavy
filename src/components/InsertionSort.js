@@ -1,14 +1,17 @@
-import React, {useState} from 'react'
-import {animated, useTransition} from 'react-spring'
-import {Container, Row, Col, Button} from 'react-bootstrap';
+import React, { useState, useEffect, useRef } from 'react'
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import Enqueue from './Forms/Enqueue'
 import Dequeue from './Forms/Dequeue'
 
 const InsertionSort = () => {
   const [array, setArray] = useState([])
   const [index, setIndex] = useState(0)
-
-  const arrayStyle =  {
+  const [running, setRunning] = useState(false)
+  const [i, setI] = useState(1)
+  const [delay, setDelay] = useState(50)
+  const [key, setKey] = useState()
+  
+  const arrayStyle = {
     position: 'absolute',
     display: 'flex',
     alignItems: 'center',
@@ -18,33 +21,73 @@ const InsertionSort = () => {
     height: '18rem',
     bottom: '-2.5px'
   }
+  
+  const sort = (a) => {
+    let temp = [...a]
+    let tempIndex = index
+    let tempKey = key
+    
+    // display each swap when comparing to key  
+    if (tempIndex >= 0 && temp[tempIndex].element > tempKey) {
+      temp[tempIndex + 1].element = temp[tempIndex].element
+      tempIndex--
+      setIndex(tempIndex)
+      return temp
+    }
+    // now change keys and display sorted array up to this point
 
-  const updateArray = () => {
-      setArray(sort(array))
+    setI(i + 1)
+    console.log(i)
+
+    // if array is not completely sorted set new key
+    if (i < array.length) setKey(temp[i].element)
+
+    setIndex(i - 1)
+    temp[tempIndex + 1].element = tempKey
+    return temp
   }
 
-  const sort = (array) => {
-    let a = [...array]
-    for (let j = 1; j < a.length; j++) {
-      let key = a[j]
-      let i = j - 1
-      while (i >= 0 && a[i].element > key.element) {
-        a[i + 1] = a[i]
-        i--
+  const useInterval = (callbackfn, delay) => {
+    const savedCallback = useRef();
+  
+    // remember the most recent callback
+    useEffect(() => {
+      savedCallback.current = callbackfn;
+    }, [callbackfn]);
+  
+    // set up the interval
+    useEffect(() => {
+      function call() {
+        savedCallback.current();
       }
-      a[i + 1] = key
+      if (delay !== null) {
+        let interval = setInterval(call, delay);
+        return () => clearInterval(interval);
+      }
+    }, [delay])
+  }
+
+  useInterval(() => {
+    if (running) {
+        if (i < array.length+1) {
+          setArray(sort(array))
+        }
     }
-    return a 
+  }, (delay !== null)? (delay*25): null)
+
+  const handleVis = (event) => {
+    event.preventDefault()
+    setRunning(true)
   }
 
   // updates state of array 
   const onAdd = (entry) => {
     setArray(add(array, entry))
-    setIndex(index + 1)
   }
 
   // returns array with number added to the end
   const add = (array, number) => {
+    let a = [...array]
     if (number == '') {
       alert('Enter number')
       return array
@@ -60,14 +103,13 @@ const InsertionSort = () => {
       return array
     }
     
-    array.push({key: index, element: Number(number)})  
-    return array
+    a.push({element: Number(number), search: false})  
+    return a
   }
 
   // updates state of array
   const onDelete = () => {
     setArray(remove(array))
-    setIndex(index + 1)
   }
 
   // returns array with first element deleted
@@ -75,23 +117,13 @@ const InsertionSort = () => {
     return array.splice(1)  
   }
 
-  const transition = useTransition(array, entry => entry.key, {
-    initial: {opacity: 0, transition: 'opacity .5s'},
-    from: {opacity: 0, transition: 'opacity .5s'},
-    enter: {opacity: 1, transition: 'opacity .5s'},
-    leave: {opacity: 0, transition: 'opacity .5s'}
-  })
-
   const displayArray = () => {
-    console.log("hello")
-    return (transition.map(({item, props, key}) =>         
-      <animated.div key={key} style={props}>
+    return (array.map((item) => 
         <li style={{listStyle: 'none'}}>
           <Col style={Object.assign({border: 'solid', borderLeft: 0, left: `${array.indexOf(item)*5}rem`}, arrayStyle)} >
-            <h4 style={{color: 'white'}}>{item.element}</h4>
+            <h4 style={item.search ? {color: 'red'} : {color: 'white'}}>{item.element}</h4>
           </Col>
         </li>
-      </animated.div>
     ))
   }
 
@@ -99,15 +131,24 @@ const InsertionSort = () => {
     <Container>
       <Row><Enqueue enqueue={onAdd} title={'Insert'}/></Row>
       <Row><Dequeue dequeue={onDelete} title={'Remove'}/></Row>
-      <Row><button className="my-1" onClick={updateArray}>Sort</button></Row>
+      <Row>
+        <Button className="my-1" onClick={handleVis}>Sort</Button>
+        <div className="my-3" style={{paddingLeft: 10}}>
+          <label htmlFor="speed-range" style={{margin: '0 auto'}}>Speed</label>
+          <input type="range" className="custom-range" id="speed-range" onChange={event => setDelay(event.target.value)} style={{transform: 'rotate(180deg)'}} />
+        </div>
+      </Row>
       <Row>
         <div style={{position: 'relative', width: '50rem', height: '18rem', margin: '0 auto' , border: 'solid'}}>
           <ul>{displayArray()}</ul>
         </div>
       </Row>
+      <Row>Key being sorted: {key}</Row>
+      <Row>From index {index+1}</Row>
     </Container>
   )
-
 }
 
 export default InsertionSort
+
+ 
