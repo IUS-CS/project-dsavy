@@ -62,7 +62,7 @@ const ListForm = () => {
             </Row>
 
             <Row style={{justifyContent:'left'}}>
-            <Form>
+            <Form data-testid="values">
                 <Form.Control className="my-1 mr-2" type="text" name="value" placeholder="Value" onChange={handleChange} value={value}/>
                 <Button onClick={onPush} type="submit" className="my-1">Push</Button>
             </Form>
