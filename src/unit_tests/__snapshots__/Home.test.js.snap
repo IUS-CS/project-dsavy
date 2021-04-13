@@ -193,7 +193,7 @@ exports[`Home page renders correctly 1`] = `
       className="col"
     >
       <a
-        href="/about"
+        href="/recursion"
         onClick={[Function]}
         style={
           Object {
@@ -212,7 +212,7 @@ exports[`Home page renders correctly 1`] = `
         >
           <img
             className="card-img-top"
-            src="../images/LinkedList.png"
+            src="../images/Recursion.png"
           />
           <div
             className="card-body"
@@ -220,7 +220,7 @@ exports[`Home page renders correctly 1`] = `
             <div
               className="card-title h5"
             >
-              Linked List
+              Recursion
             </div>
             <p
               className="card-text"
