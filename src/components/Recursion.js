@@ -30,7 +30,25 @@ const Recursion = () => {
     const [isRunning, setIsRunning] = useState(false) // 'Visualize' is pressed or not
     const [delay, setDelay] = useState(50) // initial speed is 50 (middle of slider)
 
-
+    function useInterval(callbackfn, delay) {
+        const savedCallback = useRef();
+      
+        // remember the most recent callback
+        useEffect(() => {
+          savedCallback.current = callbackfn;
+        }, [callbackfn]);
+      
+        // set up the interval
+        useEffect(() => {
+          function call() {
+            savedCallback.current();
+          }
+          if (delay !== null) {
+            let interval = setInterval(call, delay);
+            return () => clearInterval(interval);
+          }
+        }, [delay])
+    }
 
 
 
