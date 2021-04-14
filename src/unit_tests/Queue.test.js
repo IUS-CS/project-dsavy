@@ -1,6 +1,7 @@
 import React from 'react';
 import Queue from 'components/Queue';
 import renderer from 'react-test-renderer';
+import { fireEvent, getByRole, getByPlaceholderText, render, screen } from '@testing-library/react';
 
 // Queue renders
 test("Enqueue renders correctly", () => {
@@ -72,3 +73,14 @@ describe('Testing enqueue', () => {
       expect(dequeue(array)).toStrictEqual([]);
     })
 });
+
+// UI Testing
+test("allows users to insert items in queue", () => {
+  const wrapper = render(<Queue/>);
+
+  const input = screen.getByTitle('queue-input')
+  fireEvent.change(input, { target: { value: 2 } })
+  fireEvent.click(screen.getByRole('button', {name: "Enqueue"}))
+
+  screen.getByText(2)
+})
