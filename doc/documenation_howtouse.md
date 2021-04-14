@@ -7,7 +7,7 @@
 
 ## Linked List 
 ![LLadd](/doc/images/howtouse/LLadd.png?raw=true)
-![LLremove](/doc/images/LLremove.png?raw=true)
+![LLremove](/doc/images/howtouse/LLremove.png?raw=true)
 Add to and delete from the linked list using the drop down menus and respective fields. 
 
 ## Stack
@@ -19,7 +19,7 @@ Push and pop from the stack using the resepective fields.
 Enqueue and Dequeue from the queue using the resepective fields.
 
 ## Insertion Sort
-![sort](/doc/images/howtouse/insertionsort.png?raw=true)
+![sort](/doc/images/howtouse/insertion.png?raw=true)
 Insert up to 10 elements to be sorted using insertion sort as you would the other data structures. The speed of the sort can be adjusted using the speed slider. The text at the bottom informst the user what key is being compared and what index it was from.
 
 ## Recursion 
