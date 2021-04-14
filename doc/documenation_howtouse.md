@@ -2,8 +2,8 @@
 - [Linked List](#linked-list)
 - [Stack](#stack)
 - [Queue](#queue)
-- [Insertion Sort](#queue)
-- [Recursion](#queue)
+- [Insertion Sort](#insertion-sort)
+- [Recursion](#recursion)
 
 ## Linked List 
 ![LLadd](/doc/images/howtouse/LLadd.png?raw=true)
