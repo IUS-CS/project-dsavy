@@ -3,6 +3,7 @@ import Stack from 'components/Stack';
 import 'components/Forms/Stack-Form'
 import renderer from 'react-test-renderer';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import { fireEvent, getByDisplayValue, getByLabelText, getByPlaceholderText, getByRole, getByText, render, screen } from '@testing-library/react';
 
 test("Stack page renders correctly", () => {
     const tree = renderer.create(<Stack/>).toJSON()
@@ -66,3 +67,14 @@ describe('Testing pop', () => {
     })
 
 });
+
+// UI Testing
+test("allows users to insert items in stack", () => {
+  const wrapper = render(<Stack/>);
+
+  const input = screen.getByPlaceholderText('Value')
+  fireEvent.change(input, { target: { value: "one" } })
+  fireEvent.click(screen.getByRole('button', {name: "Push"}))
+
+  screen.getByText('one')
+})

@@ -20,6 +20,7 @@ exports[`Insertion Sort renders correctly 1`] = `
       <input
         className="enqueue"
         onChange={[Function]}
+        title="queue-input"
         type="number"
         value=""
       />
