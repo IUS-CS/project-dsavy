@@ -7,7 +7,7 @@ import Card from 'react-bootstrap/Card'
 const ClickableImage = (props) => {
     return (
         <Link to={props.page} style={{color:'black', textDecoration:'none'}}>
-            <Card className="custom-card" style={{ width: '18rem' }}>
+            <Card className="custom-card mb-4" style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={props.image} />
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
