@@ -1,3 +1,6 @@
+body {
+    background: radial-gradient(#ffb61785, #FFFF);
+}
 .custom-card {
     opacity: .8;
     transition: 0.2s;
