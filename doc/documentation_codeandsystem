@@ -10,9 +10,9 @@ implement our components since this seems to be preferred over the classes due t
 The system architecture can be depicted by the following graphs:
 
 ## Data Flow
-![dataflow](/doc/images/diagram1.PNG?raw=true)
+![dataflow](/doc/images/diagram1.png?raw=true)
 
 ## Data Structure and Algorithm Component Architecture
-![diagram2](/doc/images/diagram2.PNG?raw=true)
+![diagram2](/doc/images/diagram2.png?raw=true)
 
 
