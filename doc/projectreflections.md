@@ -9,6 +9,9 @@
 Throughout this project I helped with implementing data structure and algorithm components and testing; the two components I focused on were the Queue and Insertion Sort. The queue was fairly easy to implement but the insertion sort was another story. The way React handles state and changes in state brought some trouble when trying to show each swap of the algorithm. But Zaid was able to figure out a way to make state changes and have them render right away, which allowed me to use the same method in the insertion sort. Working with the group went really well and my partners were a big help along the way which was awesome. 
 
  ## Justin Hurst
+I really enjoyed working on this project. I liked the idea behind it and found it interesting to take things we learned in previous data structes and algorithms classes and implement them in a wep application. Before starting this, I knew how to use git but did not know much about branching or using git within a group. I feel like this assignment has improved my understanding and confidence with git. I knew some React going into this project but learned a lot along the way. Learning new tools like React Spring for animations and Jest with react testing library for testing has made me a better developer. 
+
+My contributions to this project included setting up the initial home page and navigation, creating the linked list component, designing pictures for the home page, and helping with testing. Overall, I feel like our group worked great together and was able to accomplish a lot. If I had it to do over again, I think I might go about implementing this project by writing an API to handle all of the logic for the data structures and algorithms. That way more complex algorithms would not have to be implemented entirely on the front-end. 
 
 
  ## Zaid Hussain
