@@ -19,9 +19,9 @@ Members present:
 
   Here are screenshots of what we did:
  
-  ![Home Page](/doc/images/Sprint5Home.PNG?raw=true)
-  ![Insertion Sort](/doc/images/Sprint5InsertionSort.PNG?raw=true)
-  ![Recursion](/doc/images/Sprint5Recursion.PNG?raw=true)
+  ![Home Page](/doc/images/Sprint5Home.png?raw=true)
+  ![Insertion Sort](/doc/images/Sprint5InsertionSort.png?raw=true)
+  ![Recursion](/doc/images/Sprint5Recursion.png?raw=true)
   
   ## Retro
 
