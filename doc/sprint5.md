@@ -12,9 +12,10 @@ Members present:
 
   This sprint, we completed:
 
-    * Improving animation and functionality of insertion sort
-    * Testing more user interface tests
-    * Adding the recursion algorithm
+  * Improving animation and functionality of insertion sort
+  * Testing more user interface tests
+  * Adding the recursion algorithm
+  * Updating the home page
 
   Here are screenshots of what we did:
  
