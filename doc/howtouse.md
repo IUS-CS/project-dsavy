@@ -6,23 +6,29 @@
 - [Recursion](#recursion)
 
 ## Linked List 
-![LLadd](/doc/images/howtouse/LLadd.png?raw=true)
-![LLremove](/doc/images/howtouse/LLremove.png?raw=true)
+
 Add to and delete from the linked list using the drop down menus and respective fields. 
+Insertion:
+![LLadd](/doc/images/howtouse/linked-list-insert.gif?raw=true)
+Deletion:
+![LLremove](/doc/images/howtouse/linked-list-remove.gif?raw=true)
 
 ## Stack
-![stack](/doc/images/howtouse/stack.png?raw=true)
+
 Push and pop from the stack using the resepective fields.
+![stack](/doc/images/howtouse/stack.gif?raw=true)
 
 ## Queue
-![Queue](/doc/images/howtouse/queue.png?raw=true)
+
 Enqueue and Dequeue from the queue using the resepective fields.
+![Queue](/doc/images/howtouse/queue.gif?raw=true)
 
 ## Insertion Sort
-![sort](/doc/images/howtouse/insertion.png?raw=true)
+
 Insert up to 10 elements to be sorted using insertion sort as you would the other data structures. The speed of the sort can be adjusted using the speed slider. The text at the bottom informst the user what key is being compared and what index it was from.
+![sort](/doc/images/howtouse/insertion-sort.gif?raw=true)
 
 ## Recursion 
-![fib](/doc/images/howtouse/fib.png?raw=true)
-Adjust the speed of the animation using the slider. This will show recursion using stacks and what function call the recursive fibonacci is at and what is returned. 
 
+Adjust the speed of the animation using the slider. This will show recursion using stacks and what function call the recursive fibonacci is at and what is returned. 
+![fib](/doc/images/howtouse/recursion-fib.gif?raw=true)
