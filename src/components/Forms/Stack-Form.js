@@ -62,7 +62,15 @@ const ListForm = () => {
         }
     }
 
-    
+    function onPeek(event) {
+        event.preventDefault();
+        // change the color
+        document.getElementById(`${stack.length-1}`).style.background = "linear-gradient(#ff9d00, #ffb61785)";
+        setTimeout(() => {
+            // reset the color after a second
+            document.getElementById(`${stack.length-1}`).style.background = "linear-gradient(#58C2ED, #1B85DC)";
+        }, 1000);
+    }
 
     function pop(array) {
         if (array.length == 0) {return array}
@@ -109,6 +117,14 @@ const ListForm = () => {
                 </Form>
             </Row>
 
+            <Row style={{justifyContent:'left', fontSize:20, fontWeight:500, paddingTop:15}}>
+                Look
+            </Row>
+            <Row style={{justifyContent:'left'}}>
+                <Form inline onSubmit={onPeek}>
+                    <Button type="submit" className="my-1" style={{}}>Peek</Button>
+                </Form>
+            </Row>
             
             {/* this div holds the stack nodes */}
             <div id="stackbox" style={
